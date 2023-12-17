@@ -11,12 +11,13 @@
     <h1>Welcome to gitPub</h1>
 
     <ul>
-        <% for(let i = 0; i < drinks.length; i++) { %>
-
-        <li><%= drinks[i].name %></li>
-
+        <% for (let i = 0; i < drinks.length; i++){ %>
+            <% drinks[i].name = drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %>
         <% } %>
-
+        
+        <% for (let x = 0; x < drinks.length; x++){ %>
+            <li class="drink-names"> <%= drinks[x].name %> </li>
+        <% } %>
     </ul>
     
 </body>
