@@ -30,6 +30,11 @@ app.use(methodOverride("_method"))
 //register drinksRouter
 app.use("/drinks", drinksRouter)
 
+//routes
+app.get("/", (req, res) => {
+    res.send("<h1>Welcome to the Gitpub App!</h1>")
+})
+
 //server listener to turn on server
 app.listen(3000, () => {
     console.log('listening on port 3000')
