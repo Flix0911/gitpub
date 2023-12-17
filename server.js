@@ -10,6 +10,9 @@ const methodOverride = require("method-override")
 //import drinks' router
 const drinksRouter = require("./controllers/drinks.js")
 
+//import our drinks - is this necessary?
+const drinks = require("./models/drinks.js")
+
 //app object creation
 const app = express()
 
