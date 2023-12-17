@@ -13,7 +13,7 @@ const drinks = require("../models/drinks.js")
 
 //display drinks data in json
 router.get("/", (req, res) => {
-    res.send(drinks)
+    res.render("index.ejs", {drinks})
 })
 
 //export the router
