@@ -13,6 +13,12 @@ const drinksRouter = require("./controllers/drinks.js")
 //import our drinks - is this necessary?
 const drinks = require("./models/drinks.js")
 
+//import food router
+const foodRouter = require("./controllers/food.js")
+
+//import our food
+const food = require("./models/food.js")
+
 //app object creation
 const app = express()
 
@@ -33,9 +39,14 @@ app.use(methodOverride("_method"))
 //register drinksRouter
 app.use("/drinks", drinksRouter)
 
+//register foodRouter
+app.use("/food", foodRouter)
+
+
 //routes
 app.get("/", (req, res) => {
-    res.send("<h1>Welcome to the Gitpub App!</h1>")
+    //res.send("<h1>Welcome to the Gitpub App!</h1>")
+    res.render("welcome.ejs")
 })
 
 //server listener to turn on server

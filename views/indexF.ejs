@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("./cssjs.ejs") %>
+
+</head>
+<body>
+    <h1>Welcome to gitPub Food</h1>
+
+    <ul>                    
+        <% for (let i = 0; i < food.length; i++){ %>
+            <a href="/food/<%= i %>"><li class="food-names"> <%= food[i].name %> </li></a>
+        <% } %>
+    </ul>
+    
+    <footer> <a href="/">Back to Welcome page</a> <footer>
+</body>
+</html>
