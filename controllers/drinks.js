@@ -18,9 +18,13 @@ router.get("/", (req, res) => {
 
 //drinks route to id
 router.get("/:id", (req, res) => {
+    const id = req.params.id
+    const drink = drinks[id]
     //id from params
     //send the id as a response
-    res.send(req.params.id)
+    //no longer need the below
+    //res.send(req.params.id)
+    res.render("show.ejs", {drink, id})
 })
 
 //export the router

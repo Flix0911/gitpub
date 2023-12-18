@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("./cssjs.ejs") %>
+
+</head>
+<body>
+    <h1>At foo bar</h1>
+    <% console.log(drink, id) %>
+
+    <h2><%= drink.name %></h2>
+    <h3>$<%= drink.price %></h2>
+    <h4>
+        <img src="<%= drink.image %>.png">
+    </h4>
+
+    <footer> <a href="/drinks">Back to the Index</a> <footer>
+</body>
+</html>
