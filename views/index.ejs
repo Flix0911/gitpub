@@ -16,7 +16,7 @@
         <% } %>
         
         <% for (let x = 0; x < drinks.length; x++){ %>
-            <li class="drink-names"> <%= drinks[x].name %> </li>
+            <a href="/drinks/<%= x %>"><li class="drink-names"> <%= drinks[x].name %> </li></a>
         <% } %>
     </ul>
     
